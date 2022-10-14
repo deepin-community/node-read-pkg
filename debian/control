@@ -1,0 +1,25 @@
+Source: node-read-pkg
+Section: javascript
+Priority: optional
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Uploaders: Sruthi Chandran <srud@disroot.org>
+Build-Depends: debhelper-compat (= 13)
+ , dh-sequence-nodejs
+ , node-parse-json <!nocheck>
+ , node-normalize-package-data (>= 3.0.0) <!nocheck>
+ , node-tape <!nocheck>
+Standards-Version: 4.6.0
+Vcs-Browser: https://salsa.debian.org/js-team/node-read-pkg
+Vcs-Git: https://salsa.debian.org/js-team/node-read-pkg.git
+Homepage: https://github.com/sindresorhus/read-pkg
+Testsuite: autopkgtest-pkg-nodejs
+Rules-Requires-Root: no
+
+Package: node-read-pkg
+Architecture: all
+Depends: ${misc:Depends}
+ , node-parse-json
+ , node-normalize-package-data (>= 3.0.0)
+Provides: ${nodejs:Provides}
+Description: Read a package.json file
+ Node.js is an event-based server-side JavaScript engine.

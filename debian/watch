@@ -1,0 +1,12 @@
+version=4
+opts=\
+dversionmangle=auto,\
+filenamemangle=s/.*\/v?([\d\.-]+)\.tar\.gz/node-read-pkg-$1.tar.gz/ \
+ https://github.com/sindresorhus/read-pkg/tags .*/archive/.*/v?([\d\.]+).tar.gz
+
+opts=\
+ctype=nodejs,\
+component=type-fest,\
+dversionmangle=auto,\
+filenamemangle=s/.*\/v?([\d\.-]+)\.tar\.gz/node-type-fest-$1.tar.gz/ \
+ https://github.com/sindresorhus/type-fest/tags .*/archive/.*/v?([\d\.]+).tar.gz ignore
